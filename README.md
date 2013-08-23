@@ -23,7 +23,7 @@ or:
 $ geoexif paris.jpg map
 [ 48.8615, 2.3316666666666666 ]
 https://maps.google.com/?q=48.8615,2.3316666666666666
-# will opem the url in your default browser...
+# will open the url in your default browser...
 ```
 
 * * *
