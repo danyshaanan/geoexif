@@ -35,7 +35,8 @@
   "dependencies": {
     "commander": "*",
     "rekuire": "*",
-    "exif": "*"
+    "exif": "*",
+    "open": "*"
   },
   "devDependencies": {
       "proxyquire": "*"

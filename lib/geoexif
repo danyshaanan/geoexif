@@ -3,6 +3,7 @@
 "use strict";
 
 var cli = require('commander');
+var open = require('open');
 var rek = require('rekuire');
 var version = require('../package.json').version;
 
@@ -16,6 +17,10 @@ cli
 
 var args = process.argv.splice(2);
 
+if (!args[0]) {
+    cli.help();
+}
+
 geoexif.getImageCoordinates(args[0], function(err, res) {
     if (err) {
         console.log("Error: " + err);
@@ -25,6 +30,7 @@ geoexif.getImageCoordinates(args[0], function(err, res) {
         console.log(url);
         if (cli.map) {
             console.log("Opening google maps...");
+            open(url);
         }
     }
 });
