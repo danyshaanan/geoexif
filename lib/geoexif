@@ -26,7 +26,7 @@ geoexif.getImageCoordinates(args[0], function(err, res) {
         console.log("Error: " + err);
     } else {
         console.log(res);
-        var url = "https://maps.google.com/?q=" + res.join();
+        var url = geoexif.parseGoogleURL(res);
         console.log(url);
         if (cli.map) {
             console.log("Opening google maps...");
