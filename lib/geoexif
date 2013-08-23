@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+"use strict";
+
+var cli = require('commander');
+var rek = require('rekuire');
+var version = require('../package.json').version;
+
+var geoexif = rek('geoexif');
+
+cli
+    .version(version)
+    // .usage("[ show | link [ from <SOURCE> to <TARGET> ] | unlink [id] | empty | run [id] ]")
+    // .option("show", "prints the nsyrc links for the current folder. same as just 'nsyrc'")
+    // .option("link", "set a new nsyrc link")
+    // .option("from <path>", "source of a new link. works only together with 'link' and 'to'")
+    // .option("to <path>", "target of a new link. works only together with 'link' and 'from'")
+    // .option("unlink [id]", "remove a link", parseInt)
+    // .option("empty", "remove all unlinked links from the trash")
+    // .option("run [id]", "run a link", parseInt)
+    // .option("wet", "skip dry-runs")
+    .parse(process.argv);
+
+
+
+geoexif.getImageCoordinates('textImages/paris.jpg', function(err, res) {
+    if (err) {
+        console.log("Error: " + err);
+    } else {
+        console.log(res);
+    }
+});
+
+
+// if (cli.link && cli.from && cli.to) {
+    // nsyrc.createLink(cli.from, cli.to);
+// } else if (cli.run) {
+    // nsyrc.run(cli.run, cli.wet);
+// } else {
+    // nsyrc.show();
+// }

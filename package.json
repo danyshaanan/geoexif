@@ -33,6 +33,7 @@
       "geoexif" : "./lib/geoexif"
   },
   "dependencies": {
+    "commander": "*",
     "rekuire": "*",
     "exif": "*"
   },
