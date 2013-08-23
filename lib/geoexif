@@ -21,9 +21,9 @@ cli
     // .option("wet", "skip dry-runs")
     .parse(process.argv);
 
+var args = process.argv.splice(2);
 
-
-geoexif.getImageCoordinates('textImages/paris.jpg', function(err, res) {
+geoexif.getImageCoordinates(args[0], function(err, res) {
     if (err) {
         console.log("Error: " + err);
     } else {
