@@ -1,0 +1,42 @@
+{
+  "name": "geoexif",
+  "version": "0.0.0",
+  "description": "A command line tool for extracting and using geo locatiom data from images",
+  "keywords": ["exif", "geolocation", "image", "photo", "location"],
+  "homepage": "https://github.com/danyshaanan/geoexif",
+  "author": {
+    "name": "Dany Shaanan",
+    "email": "danyshaanan@gmail.com",
+    "url": "http://danyshaanan.com/"
+  },
+  "contributors": [],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/danyshaanan/geoexif/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danyshaanan/geoexif.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/danyshaanan/geoexif",
+    "email" : "danyshaanan@gmail.com"
+  },
+  "preferGlobal": true,
+  "main": "./lib/geoexif.js",
+  "scripts": {
+    "test": "jasmine-node ./test/"
+  },
+  "bin": {
+      "geoexif" : "./lib/geoexif"
+  },
+  "dependencies": {
+    "rekuire": "*",
+    "exif": "*"
+  },
+  "devDependencies": {
+      "proxyquire": "*"
+  }
+}
