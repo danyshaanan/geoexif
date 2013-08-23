@@ -28,6 +28,8 @@ geoexif.getImageCoordinates('textImages/paris.jpg', function(err, res) {
         console.log("Error: " + err);
     } else {
         console.log(res);
+        var url = "https://maps.google.com/?q=" + res.join();
+        console.log(url);
     }
 });
 
