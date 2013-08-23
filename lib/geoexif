@@ -10,15 +10,8 @@ var geoexif = rek('geoexif');
 
 cli
     .version(version)
-    // .usage("[ show | link [ from <SOURCE> to <TARGET> ] | unlink [id] | empty | run [id] ]")
-    // .option("show", "prints the nsyrc links for the current folder. same as just 'nsyrc'")
-    // .option("link", "set a new nsyrc link")
-    // .option("from <path>", "source of a new link. works only together with 'link' and 'to'")
-    // .option("to <path>", "target of a new link. works only together with 'link' and 'from'")
-    // .option("unlink [id]", "remove a link", parseInt)
-    // .option("empty", "remove all unlinked links from the trash")
-    // .option("run [id]", "run a link", parseInt)
-    // .option("wet", "skip dry-runs")
+    .usage("<filename> [map]")
+    .option("map", "open Google Maps at location of image")
     .parse(process.argv);
 
 var args = process.argv.splice(2);
@@ -30,14 +23,9 @@ geoexif.getImageCoordinates(args[0], function(err, res) {
         console.log(res);
         var url = "https://maps.google.com/?q=" + res.join();
         console.log(url);
+        if (cli.map) {
+            console.log("Opening google maps...");
+        }
     }
 });
 
-
-// if (cli.link && cli.from && cli.to) {
-    // nsyrc.createLink(cli.from, cli.to);
-// } else if (cli.run) {
-    // nsyrc.run(cli.run, cli.wet);
-// } else {
-    // nsyrc.show();
-// }
