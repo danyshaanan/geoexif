@@ -10,28 +10,28 @@ var version = require('../package.json').version;
 var geoexif = rek('geoexif');
 
 cli
-    .version(version)
-    .usage("<filename> [map]")
-    .option("map", "open Google Maps at location of image")
-    .parse(process.argv);
+  .version(version)
+  .usage("<filename> [map]")
+  .option("map", "open Google Maps at location of image")
+  .parse(process.argv);
 
 var args = process.argv.splice(2);
 
 if (!args[0]) {
-    cli.help();
+  cli.help();
 }
 
 geoexif.getImageCoordinates(args[0], function(err, res) {
-    if (err) {
-        console.log("Error: " + err);
-    } else {
-        console.log(res);
-        var url = geoexif.parseGoogleURL(res);
-        console.log(url);
-        if (cli.map) {
-            console.log("Opening google maps...");
-            open(url);
-        }
+  if (err) {
+    console.log("Error: " + err);
+  } else {
+    console.log(res);
+    var url = geoexif.parseGoogleURL(res);
+    console.log(url);
+    if (cli.map) {
+      console.log("Opening google maps...");
+      open(url);
     }
+  }
 });
 
