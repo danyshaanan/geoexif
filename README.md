@@ -1,7 +1,8 @@
-geoexif
+geoexif - WIP
 =======
-
 A nodejs tool to extract and manipulate geolocation data from images.
+
+This is a work in progress, currently on hold.
 
 #### Installation
 ```bash
