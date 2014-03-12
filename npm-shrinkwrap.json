@@ -1,0 +1,35 @@
+{
+  "name": "geoexif",
+  "version": "0.0.1",
+  "from": "geoexif@",
+  "resolved": "https://registry.npmjs.org/geoexif/-/geoexif-0.0.1.tgz",
+  "dependencies": {
+    "commander": {
+      "version": "2.1.0",
+      "from": "commander@*",
+      "resolved": "https://registry.npmjs.org/commander/-/commander-2.1.0.tgz"
+    },
+    "rekuire": {
+      "version": "0.1.5",
+      "from": "rekuire@~0.1.5",
+      "resolved": "https://registry.npmjs.org/rekuire/-/rekuire-0.1.5.tgz",
+      "dependencies": {
+        "underscore": {
+          "version": "1.5.2",
+          "from": "underscore@*",
+          "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.5.2.tgz"
+        }
+      }
+    },
+    "exif": {
+      "version": "0.3.3",
+      "from": "exif@*",
+      "resolved": "https://registry.npmjs.org/exif/-/exif-0.3.3.tgz"
+    },
+    "open": {
+      "version": "0.0.4",
+      "from": "open@*",
+      "resolved": "https://registry.npmjs.org/open/-/open-0.0.4.tgz"
+    }
+  }
+}
