@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-"use strict";
+'use strict';
 
 var cli = require('commander');
-var open = require('open');
+var openLib = require('open');
 var rek = require('rekuire');
 var version = require('../package.json').version;
 
@@ -11,8 +11,8 @@ var geoexif = rek('geoexif');
 
 cli
   .version(version)
-  .usage("<filename> [map]")
-  .option("map", "open Google Maps at location of image")
+  .usage('<filename> [map]')
+  .option('map', 'open Google Maps at location of image')
   .parse(process.argv);
 
 var args = process.argv.splice(2);
@@ -23,15 +23,14 @@ if (!args[0]) {
 
 geoexif.getImageCoordinates(args[0], function(err, res) {
   if (err) {
-    console.log("Error: " + err);
+    console.log('Error: ' + err);
   } else {
     console.log(res);
     var url = geoexif.parseGoogleURL(res);
     console.log(url);
     if (cli.map) {
-      console.log("Opening google maps...");
-      open(url);
+      console.log('Opening google maps...');
+      openLib(url);
     }
   }
 });
-
