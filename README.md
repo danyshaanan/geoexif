@@ -1,5 +1,9 @@
-geoexif - WIP
-=======
+# geoexif - WIP
+
+[![Build Status](https://travis-ci.org/danyshaanan/geoexif.png)](https://travis-ci.org/danyshaanan/geoexif)
+[![NPM Version](https://img.shields.io/npm/v/geoexif.svg?style=flat)](https://npmjs.org/package/geoexif)
+[![License](http://img.shields.io/npm/l/geoexif.svg?style=flat)](LICENSE)
+
 A nodejs tool to extract and manipulate geolocation data from images.
 
 This is a work in progress, currently on hold.
