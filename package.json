@@ -27,7 +27,7 @@
   "preferGlobal": true,
   "main": "./lib/geoexif.js",
   "scripts": {
-    "test": "jasmine-node ./test/"
+    "test": "grunt"
   },
   "bin": {
       "geoexif" : "./lib/geoexif"
