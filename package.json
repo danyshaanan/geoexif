@@ -1,6 +1,6 @@
 {
   "name": "geoexif",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A command line tool for extracting and using geo locatiom data from images",
   "keywords": ["exif", "geolocation", "image", "photo", "location"],
   "homepage": "https://github.com/danyshaanan/geoexif",
