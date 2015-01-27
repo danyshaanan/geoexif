@@ -26,7 +26,7 @@
     "email" : "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./lib/geoexif.js",
+  "main": "./src/geoexif.js",
   "scripts": {
     "test": "grunt"
   },
