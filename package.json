@@ -34,9 +34,9 @@
       "geoexif" : "./lib/geoexif"
   },
   "dependencies": {
-    "commander": "*",
-    "exif": "*",
-    "open": "*"
+    "commander": "2.1.0",
+    "exif": "0.3.3",
+    "open": "0.0.4"
   },
   "devDependencies": {
     "grunt": "0.4.5",
