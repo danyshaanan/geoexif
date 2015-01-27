@@ -31,7 +31,7 @@
     "test": "grunt"
   },
   "bin": {
-      "geoexif" : "./lib/geoexif"
+      "geoexif" : "./src/geoexif"
   },
   "dependencies": {
     "commander": "2.1.0",
