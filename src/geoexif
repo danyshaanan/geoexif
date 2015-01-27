@@ -4,10 +4,8 @@
 
 var cli = require('commander')
 var openLib = require('open')
-var rek = require('rekuire')
 var version = require('../package.json').version
-
-var geoexif = rek('geoexif')
+var geoexif = require('./geoexif.js')
 
 cli
   .version(version)

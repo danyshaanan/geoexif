@@ -1,7 +1,6 @@
 'use strict'
 
 var ExifImage = require('exif').ExifImage
-// var rek = require('rekuire')
 
 module.exports = {
   getImageCoordinates: getImageCoordinates,
