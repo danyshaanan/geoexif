@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     eslint: {
-      target: ['src/geoexif', 'src/geoexif.js']
+      target: ['src/**']
     },
     tape: {
       files: ['src/test.js']
