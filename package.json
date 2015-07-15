@@ -47,6 +47,8 @@
   "devDependencies": {
     "grunt": "0.4.5",
     "grunt-bump": "0.0.16",
-    "grunt-eslint": "4.0.0"
+    "grunt-eslint": "4.0.0",
+    "grunt-tape": "0.0.2",
+    "tape": "4.0.0"
   }
 }

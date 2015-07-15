@@ -14,11 +14,15 @@ module.exports = function(grunt) {
         tagName: '%VERSION%',
         push: false
       }
+    },
+    tape: {
+      files: ['src/test.js']
     }
   })
 
   grunt.loadNpmTasks('grunt-eslint')
+  grunt.loadNpmTasks('grunt-tape')
   grunt.loadNpmTasks('grunt-bump')
 
-  grunt.registerTask('default', ['eslint'])
+  grunt.registerTask('default', ['eslint', 'tape'])
 };

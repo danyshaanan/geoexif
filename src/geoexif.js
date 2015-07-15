@@ -4,7 +4,8 @@ var ExifImage = require('exif').ExifImage
 
 module.exports = {
   getImageCoordinates: getImageCoordinates,
-  parseGoogleURL: parseGoogleURL
+  parseGoogleURL: parseGoogleURL,
+  processExif: processExif
 }
 
 
