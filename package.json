@@ -2,7 +2,13 @@
   "name": "geoexif",
   "version": "0.0.3",
   "description": "A command line tool for extracting and using geo locatiom data from images",
-  "keywords": ["exif", "geolocation", "image", "photo", "location"],
+  "keywords": [
+    "exif",
+    "geolocation",
+    "image",
+    "photo",
+    "location"
+  ],
   "homepage": "https://github.com/danyshaanan/geoexif",
   "author": {
     "name": "Dany Shaanan",
@@ -22,8 +28,8 @@
     "url": "git://github.com/danyshaanan/geoexif.git"
   },
   "bugs": {
-    "url" : "https://github.com/danyshaanan/geoexif",
-    "email" : "danyshaanan@gmail.com"
+    "url": "https://github.com/danyshaanan/geoexif",
+    "email": "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
   "main": "./src/geoexif.js",
@@ -31,7 +37,7 @@
     "test": "grunt"
   },
   "bin": {
-      "geoexif" : "./src/geoexif"
+    "geoexif": "./src/geoexif"
   },
   "dependencies": {
     "commander": "2.1.0",
