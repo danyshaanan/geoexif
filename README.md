@@ -34,7 +34,6 @@ https://maps.google.com/?q=48.8615,2.3316666666666666
 * * *
 #### TODOs
 
-* Check that negative coordinates work correctly
 * Use Google api to extract location name
 * Enable running on multiple files - parse a kml file to represent a map with all locations, or html with links
 * Handle images without exif better
