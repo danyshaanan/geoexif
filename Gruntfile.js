@@ -7,14 +7,6 @@ module.exports = function(grunt) {
     eslint: {
       target: ['src/geoexif', 'src/geoexif.js']
     },
-    bump: {
-      options: {
-        files: ['package.json', 'npm-shrinkwrap.json'],
-        commitFiles: ['package.json', 'npm-shrinkwrap.json'],
-        tagName: '%VERSION%',
-        push: false
-      }
-    },
     tape: {
       files: ['src/test.js']
     }
@@ -22,7 +14,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-eslint')
   grunt.loadNpmTasks('grunt-tape')
-  grunt.loadNpmTasks('grunt-bump')
 
   grunt.registerTask('default', ['eslint', 'tape'])
 };
