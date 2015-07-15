@@ -32,6 +32,14 @@ function parseGoogleURL(coordinates) {
 function processExif(exifData) {
   var lat = amsToFloat(exifData.gps.GPSLatitude)
   var long = amsToFloat(exifData.gps.GPSLongitude)
+
+  if (exifData.gps.GPSLongitudeRef === 'W') {
+    long *= -1
+  }
+  if (exifData.gps.GPSLatitudeRef === 'S') {
+    lat *= -1
+  }
+
   return [lat, long]
 }
 
