@@ -32,22 +32,23 @@
     "email": "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./src/geoexif.js",
+  "main": "./src/main/main.js",
   "scripts": {
-    "test": "grunt"
+    "lint": "./node_modules/.bin/eslint src/**/*.js",
+    "tape": "./node_modules/.bin/tape src/test/**/*.js",
+    "test": "npm run lint && npm run tape"
   },
   "bin": {
-    "geoexif": "./src/geoexif"
+    "geoexif": "./src/main/bin.js"
+  },
+  "engines": {
+    "node": ">=0.11.0"
   },
   "dependencies": {
-    "commander": "2.1.0",
-    "exif": "0.3.3",
-    "open": "0.0.4"
+    "open": "0.0.5"
   },
   "devDependencies": {
-    "grunt": "0.4.5",
-    "grunt-eslint": "4.0.0",
-    "grunt-tape": "0.0.2",
+    "eslint": "0.24.1",
     "tape": "4.0.0"
   }
 }
