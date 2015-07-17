@@ -7,10 +7,10 @@ function directionMultiplier(dir) {
 }
 
 function amsToFloat(AMS) {
-  return !AMS ? 0 : AMS.split(',').map(function(v, i) {
+  return AMS.split(',').reverse().reduce(function(prev, v) {
     var frac = v.split('/').map(function(s){ return parseInt(s, 10) })
-    return frac[0] / frac[1] / Math.pow(60, i)
-  }).reduce(function(a, b) { return a + b })
+    return prev / 60 + (frac[0] / frac[1])
+  }, 0)
 }
 
 function cleanExifLocationData(data) {
