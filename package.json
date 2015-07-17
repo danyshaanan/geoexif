@@ -1,6 +1,6 @@
 {
   "name": "geoexif",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A command line tool for extracting and using geo locatiom data from images",
   "keywords": [
     "exif",
