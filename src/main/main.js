@@ -1,26 +1,25 @@
 'use strict'
 
-var getExifFieldsFromFile = require('./lib/getExifFieldsFromFile.js')
-
-function directionMultiplier(dir) {
-  return (dir === 'W' || dir === 'S') ? -1 : 1
+function calcStringFraction(str) {
+  var frac = str.split('/')
+  return parseInt(frac[0]) / parseInt(frac[1])
 }
 
-function amsToFloat(AMS) {
-  return AMS.split(',').reverse().reduce(function(prev, v) {
-    var frac = v.split('/').map(function(s){ return parseInt(s, 10) })
-    return prev / 60 + (frac[0] / frac[1])
-  }, 0)
+function exifCoordinateToDecimal(exifCoordinate) {
+  var dms = exifCoordinate.split(',').map(calcStringFraction)
+  return dms[0] + dms[1] / 60 + dms[2] / 3600
 }
 
 function cleanExifLocationData(data) {
-  return [
-    directionMultiplier(data.GPSLatitudeRef) * amsToFloat(data.GPSLatitude),
-    directionMultiplier(data.GPSLongitudeRef) * amsToFloat(data.GPSLongitude)
-  ]
+  return {
+    lat: (data.GPSLatitudeRef === 'S' ? -1 : 1) * exifCoordinateToDecimal(data.GPSLatitude),
+    lon: (data.GPSLongitudeRef === 'W' ? -1 : 1) * exifCoordinateToDecimal(data.GPSLongitude)
+  }
 }
 
 //////////////////////////////////////////////////
+
+var getExifFieldsFromFile = require('./lib/getExifFieldsFromFile.js')
 
 function getImageCoordinates(imageFile) {
   return getExifFieldsFromFile(['GPSLatitude', 'GPSLatitudeRef', 'GPSLongitude', 'GPSLongitudeRef'], imageFile)

@@ -13,7 +13,7 @@ if (!cli.target) {
 } else {
   geoexif.getImageCoordinates(cli.target)
     .then(function(loc) {
-      var commaSeparated = loc.join()
+      var commaSeparated = loc.lat + ',' + loc.lon
       var url = 'https://www.google.com/maps?q=' + commaSeparated
 
       console.log(commaSeparated)
