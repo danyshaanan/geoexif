@@ -5,9 +5,8 @@ var main = require(process.cwd() + '/package.json').main
 var geoexif = require(process.cwd() + '/' + main)
 
 var files = {
-  haifa: { lat: 32.78458055555556, lon: 34.98685555555556 },
+  aus: { lat: -27.479999999999997, lon: 153.00416666666666 },
   nyc: { lat: 40.75675833333333, lon: -73.98603888888888 },
-  paris: { lat: 48.86031666666667, lon: 2.3617194444444447 },
   tlv: { lat: 32.055816666666665, lon: 34.78420277777778 }
 }
 
@@ -21,13 +20,13 @@ Object.keys(files).forEach(function(key) {
   })
 })
 
-test('getExifFieldsFromFile on haifa.jpg', function(t) {
+test('getExifFieldsFromFile on tlv.jpg', function(t) {
   var expected = {
-    GPSLatitude: '32/1, 47/1, 449/100',
+    GPSLatitude: '32/1, 3/1, 1047/50',
     GPSLatitudeRef: 'N'
   }
 
-  geoexif.getExifFieldsFromFile(Object.keys(expected), './src/test/images/haifa.jpg')
+  geoexif.getExifFieldsFromFile(Object.keys(expected), './src/test/images/tlv.jpg')
     .then(function(res) {
       t.equal(JSON.stringify(res), JSON.stringify(expected))
       t.end()
