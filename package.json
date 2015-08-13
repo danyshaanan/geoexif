@@ -48,7 +48,9 @@
     "open": "0.0.5"
   },
   "devDependencies": {
-    "eslint": "1.0.0",
+    "eslint": "1.1.0",
+    "eslint-config-standard": "4.1.0",
+    "eslint-plugin-standard": "1.2.0",
     "tape": "4.0.0"
   }
 }
