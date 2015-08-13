@@ -48,7 +48,7 @@
     "open": "0.0.5"
   },
   "devDependencies": {
-    "eslint": "0.24.1",
+    "eslint": "1.0.0",
     "tape": "4.0.0"
   }
 }
