@@ -2,7 +2,7 @@
 
 function calcStringFraction(str) {
   var frac = str.split('/')
-  return parseInt(frac[0]) / parseInt(frac[1])
+  return parseInt(frac[0], 10) / parseInt(frac[1], 10)
 }
 
 function exifCoordinateToDecimal(exifCoordinate) {
@@ -17,7 +17,7 @@ function cleanExifLocationData(data) {
   }
 }
 
-//////////////////////////////////////////////////
+// -----------------------------------------------------------------------------
 
 var getExifFieldsFromFile = require('./lib/getExifFieldsFromFile.js')
 
