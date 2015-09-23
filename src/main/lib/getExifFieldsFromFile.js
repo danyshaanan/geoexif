@@ -25,7 +25,7 @@ function parseCommand(file, fields) {
   return 'identify -format "' + fields.map(function(field) { return '%[EXIF:' + field + ']' }).join('|') + '" "' + file + '"'
 }
 
-//////////////////////////////////////////////////
+// ////////////////////////////////////////////////
 
 function getExifFieldsFromFile(fields, file) {
   return checkBrewBinExists('identify', 'imagemagick')
@@ -41,6 +41,5 @@ function getExifFieldsFromFile(fields, file) {
 }
 
 module.exports = getExifFieldsFromFile
-
 
 //
