@@ -36,7 +36,8 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/**/*.js",
     "tape": "./node_modules/.bin/tape src/test/**/*.js",
-    "test": "npm run lint && npm run tape"
+    "test": "npm run lint && npm run tape",
+    "start": "npm test"
   },
   "bin": {
     "geoexif": "./src/main/bin.js"
