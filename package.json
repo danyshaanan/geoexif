@@ -34,7 +34,7 @@
   "preferGlobal": true,
   "main": "./src/main/main.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src",
+    "lint": "eslint .",
     "tape": "./node_modules/.bin/tape src/test/**/*.js",
     "test": "npm run lint && npm run tape",
     "start": "npm test"
