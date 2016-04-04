@@ -35,8 +35,8 @@
   "main": "./src/main/main.js",
   "scripts": {
     "lint": "eslint .",
-    "tape": "./node_modules/.bin/tape src/test/**/*.js",
-    "test": "npm run lint && npm run tape",
+    "ava": "ava src/test",
+    "test": "npm run lint && npm run ava",
     "start": "npm test"
   },
   "bin": {
@@ -49,9 +49,10 @@
     "open": "0.0.5"
   },
   "devDependencies": {
+    "ava": "0.13.0",
+    "babel-eslint": "6.0.2",
     "eslint": "1.1.0",
     "eslint-config-standard": "4.1.0",
-    "eslint-plugin-standard": "1.2.0",
-    "tape": "4.0.0"
+    "eslint-plugin-standard": "1.2.0"
   }
 }
